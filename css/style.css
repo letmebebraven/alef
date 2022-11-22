@@ -143,7 +143,19 @@ body {
 .header-icons svg {
     fill: var(--black);
 }
-
+/* header mainpage */
+.header-main {
+    font-weight: 700;
+}
+.header-topline {
+    border-color: var(--white);
+}
+.header-icons svg {
+    fill: var(--white);
+}
+.header-burger-menu svg {
+    fill: var(--white);
+}
 /* media 1120- */
 @media (max-width: 1119px) {
     .header-categories {
@@ -183,6 +195,9 @@ body {
     .header-icons {
         margin: 0 0 0 -20px;
     }
+    .header-main .header-categories {
+        border-color: var(--white);
+    }
 }
 @media (max-width: 767px) {
     .header-mainline {
@@ -198,6 +213,9 @@ body {
     .header-icons li {
         margin: 0 12px;
     }
+    .header-main .header-mainline {
+        border-color: var(--white);
+    }
 }
 
 
@@ -205,4 +223,8 @@ body {
 /* temp styles */
 .header-notification {
     display: none;
+}
+body {
+    background: var(--grey-80);
+    color: var(--white);
 }
