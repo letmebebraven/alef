@@ -26,6 +26,10 @@
     --wb: linear-gradient(90deg, #CA12AA 0%, #AD139F 23.78%, #87148F 50.9%, #6D1483 73.9%, #4A1173 100%);
 }
 /* base */
+* {
+    position: relative;
+    box-sizing: border-box;
+}
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 13.3px;
@@ -143,9 +147,25 @@ body {
 .header-icons svg {
     fill: var(--black);
 }
+.header-items-in-cart {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--red);
+    color: var(--white);
+    font-size: 9.26px;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    position: absolute;
+    top: -8.03px;
+    right: -11.84px;
+}
 /* header mainpage */
 .header-main {
     font-weight: 700;
+    color: var(--white);
 }
 .header-topline {
     border-color: var(--white);
@@ -194,6 +214,9 @@ body {
     }
     .header-icons {
         margin: 0 0 0 -20px;
+    }
+    .header-items-in-cart {
+        display: none;
     }
     .header-main .header-categories {
         border-color: var(--white);
