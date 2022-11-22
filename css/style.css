@@ -50,15 +50,17 @@ body {
     font-size: 0;
     width: 12px;
     height: 12px;
-    background: url("../img/close-icon.svg") no-repeat center;
     border: 0;
     padding: 0;
     position: absolute;
     right: 40px;
     top: 18px;
+    background: transparent;
+}
+.header-notification-close svg {
+    fill: var(--white);
 }
 .header-topline {
-    color: var(--grey-50);
     padding: 7px 40px;
     display: flex;
     justify-content: space-between;
@@ -70,6 +72,7 @@ body {
 }
 .header-phone-time-bar span {
     margin: 0 15px;
+    opacity: 0.5;
 }
 .header-links-bar {
     list-style: none;
@@ -79,6 +82,7 @@ body {
 }
 .header-links-bar li {
     margin: 0 15px;
+    opacity: 0.5;
 }
 .header-links-bar a {
     text-decoration: none;
@@ -95,9 +99,12 @@ body {
     display: none;
     width: 21.75px;
     height: 18px;
-    background: url("../img/menu-icon.svg") no-repeat center;
+    background: transparent;
     border: none;
     font-size: 0;
+}
+.header-burger-menu svg {
+    fill: var(--black);
 }
 .header-logo {
     display: flex;
@@ -133,6 +140,10 @@ body {
 .header-icons li {
     margin: 0 20px;
 }
+.header-icons svg {
+    fill: var(--black);
+}
+
 /* media 1120- */
 @media (max-width: 1119px) {
     .header-categories {
