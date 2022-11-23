@@ -203,10 +203,16 @@ body {
     padding: 30px 0 34px;
     font-size: 14px;
     line-height: 17.07px;
+    border-top: 1px solid var(--grey-15);
+    border-bottom: 1px solid var(--grey-15);
 }
 .footer-block {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-column {
+    width: 25%;
+    flex-shrink: 0;
 }
 .footer-column-title {
     margin-bottom: 20px;
@@ -250,23 +256,59 @@ body {
     padding: 0;
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
 }
 .footer-social-links li {
     margin: 0 10px;
     display: flex;
     flex-direction: column;
+    font-size: 12px;
+    line-height: auto;
+    color: var(--grey-60);
+}
+.footer-social-links a {
+    text-decoration: none;
+    color: inherit;
+    width: 47px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-social-links svg {
+    fill: var(--grey-25);
+    margin-bottom: 10px;
+}
+.footer-social-links span {
+    margin-top: auto;
+}
+.footer-bottomline {
+    background: var(--grey-90);
+    color: var(--white-30);
+    padding: 16.5px 0;
+    font-size: 14px;
+    line-height: 24px;
 }
 /* media 1120- */
 @media (max-width: 1119px) {
+    .container {
+        width: 1024px;
+    }
     .header-categories {
         margin: 0 -11px;
     }
     .header-categories li {
         margin: 0 11px;
     }
+    .footer-social-links a {
+        width: 46px;
+    }
 }
 /* media 1024- */
 @media (max-width: 1023px) {
+    .container {
+        width: 768px;
+    }
     .header-topline {
         display: none;
     }
@@ -301,8 +343,19 @@ body {
     .header-main .header-categories {
         border-color: var(--white);
     }
+    .footer-social-links {
+        padding-right: 10px;
+        margin-bottom: -20px;
+    }
+    .footer-social-links li {
+        margin-bottom: 20px;
+    }
 }
+/* media 768- */
 @media (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
     .header-mainline {
         border-bottom: 1px solid var(--grey-10);
         padding-bottom: 15px;
@@ -318,6 +371,27 @@ body {
     }
     .header-main .header-mainline {
         border-color: var(--white);
+    }
+    .footer-info-block {
+        margin-bottom: 40px;
+    }
+    .footer-column-title {
+        font-weight: 700;
+    }
+    .footer-column {
+        width: 100%;
+    }
+    .footer-links li:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    .footer-company-block {
+        display: none;
+    }
+    .footer-account-block {
+        display: none;
+    }
+    .footer-subscribe-block {
+        display: none;
     }
 }
 
