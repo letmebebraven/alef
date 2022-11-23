@@ -253,6 +253,8 @@ body {
 }
 .footer-social-links li {
     margin: 0 10px;
+    display: flex;
+    flex-direction: column;
 }
 /* media 1120- */
 @media (max-width: 1119px) {
