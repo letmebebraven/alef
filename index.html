@@ -7,6 +7,7 @@
     <title>Фабрика ALEF</title>
 
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -71,7 +72,7 @@
         </div>
     </header>
     <main>
-        <div class="hero-banner">
+        <section class="hero-banner">
             <picture class="hero-banner-img">
                 <source media="(min-width:1125px)" srcset="img/hero/hero-banner.jpg">
                 <source media="(min-width:750px)" srcset="img/hero/hero-tablet.jpg">
@@ -85,7 +86,42 @@
                 
                 <a href="#" class="hero-offer-link">Смотреть со скидками >></a>
             </div>
-        </div>
+        </section>
+        <section class="stories-block">
+            <div class="stories-slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="stories-item swiper-slide">
+                        <img src="img/stories/1.jpg" alt="" width="130" height="130">
+                        <span class="h5">Октябрь 2022</span>
+                    </div>
+                    <div class="stories-item swiper-slide">
+                        <img src="img/stories/2.jpg" alt="" width="130" height="130">
+                        <span class="h5">Новинки</span>
+                    </div>
+                    <div class="stories-item swiper-slide">
+                        <img src="img/stories/3.jpg" alt="" width="130" height="130">
+                        <span class="h5">Советы по уходу</span>
+                    </div>
+                    <div class="stories-item swiper-slide">
+                        <img src="img/stories/4.jpg" alt="" width="130" height="130">
+                        <span class="h5">Выставка LeeSHOW</span>
+                    </div>
+                    <div class="stories-item swiper-slide">
+                        <img src="img/stories/5.jpg" alt="" width="130" height="130">
+                        <span class="h5">Новый экомех</span>
+                    </div>
+                    <div class="stories-item swiper-slide">
+                        <img src="img/stories/6.jpg" alt="" width="130" height="130">
+                        <span class="h5">Производство</span>
+                    </div>
+                    <div class="stories-item swiper-slide">
+                        <img src="img/stories/7.jpg" alt="" width="130" height="130">
+                        <span class="h5">Крой</span>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="footer-mainline">
@@ -168,5 +204,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
