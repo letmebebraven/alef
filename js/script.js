@@ -59,3 +59,13 @@ const swiperMainHit = new Swiper('.main-hit-slider', {
       }
     }
 );
+const swiperMainActions = new Swiper('.main-actions-slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    breakpoints: {
+        1025: {
+          slidesPerView: 4
+        }
+      }
+    }
+);

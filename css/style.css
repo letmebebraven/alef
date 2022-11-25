@@ -541,10 +541,14 @@ h5,
     top: 96px;
     right: 20px;
 }
+.main-actions-slider {
+    margin: 0 -20px;
+}
 /* catalog slider item */
 .main-slider-item img {
     object-fit: cover;
 }
+
 /* media 1600- */
 @media (max-width: 1600px) {
   .hero-banner {
@@ -787,6 +791,12 @@ h5,
     padding-right: 26px;
     color: var(--grey-70)
   }
+  .main-actions-slider {
+    margin: 0;
+  }
+  .main-actions-slider img {
+    width: 400px;
+  }
 }
 /* media 768- */
 @media (max-width: 767px) {
@@ -935,7 +945,9 @@ h5,
     background-size: 10px;
     padding-right: 15px;
   }
-
+  .main-actions-slider .main-slider-item {
+    width: 280px;
+  }
 }
 /* media 425- */
 @media (max-width: 425px) {
