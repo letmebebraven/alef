@@ -22,15 +22,40 @@ const swiperMainNew = new Swiper('.main-new-slider', {
             spaceBetween: 20
           },
         1025: {
-          slidesPerView: 3
+          slidesPerView: 3,
+          spaceBetween: 20
         },
         1160: {
-          slidesPerView: 4
+          slidesPerView: 4,
+          spaceBetween: 20
         },
         1540: {
-            slidesPerView: 5
+            slidesPerView: 5,
+            spaceBetween: 20
           }
       }
-}
-
+    }
+);
+const swiperMainHit = new Swiper('.main-hit-slider', {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    breakpoints: {
+        750: {
+            slidesPerView: 'auto',
+            spaceBetween: 20
+          },
+        1025: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        },
+        1160: {
+          slidesPerView: 4,
+          spaceBetween: 20
+        },
+        1540: {
+            slidesPerView: 5,
+            spaceBetween: 20
+          }
+      }
+    }
 );

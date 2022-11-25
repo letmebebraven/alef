@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap");
 
 :root {
   --black: #000000;
@@ -515,10 +515,28 @@ h5,
 .main-slider {
     overflow: visible;
 }
-.main-new-title {
+.main-slider-title {
     margin-bottom: 30px;
 }
 .main-new-link {
+    position: absolute;
+    top: 96px;
+    right: 20px;
+}
+.main-hit-link-block {
+    position: absolute;
+    top: 96px;
+    right: 20px;
+}
+.main-hit-link:not(:last-child) {
+    margin-right: 20px;
+}
+.main-hit-link-selected {
+    font-weight: 600;
+    text-decoration: underline;
+}
+.main-hit-dropdown {
+    display: none;
     position: absolute;
     top: 96px;
     right: 20px;
@@ -756,6 +774,19 @@ h5,
   .main-slider-item {
     width: 321px;
   }
+  .main-hit-link-block {
+    display: none;
+  }
+  .main-hit-dropdown {
+    display: block;
+    border: none;
+    background: transparent url("../img/dropdown-arrow.svg") right center no-repeat;
+    background-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 26px;
+    color: var(--grey-70)
+  }
 }
 /* media 768- */
 @media (max-width: 767px) {
@@ -899,6 +930,12 @@ h5,
   .main-new-link {
     top: 54px;
   }
+  .main-hit-dropdown {
+    top: 54px;
+    background-size: 10px;
+    padding-right: 15px;
+  }
+
 }
 /* media 425- */
 @media (max-width: 425px) {
