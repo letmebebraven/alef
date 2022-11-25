@@ -57,18 +57,12 @@ main {
   display: flex;
   flex-direction: column;
 }
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: var(--time);
-}
-img {
-  max-width: 100%;
-}
-.container {
-  width: 1120px;
-  padding: 0 20px;
-  margin: 0 auto;
+h1,
+.h1 {
+    margin: 0 0 20px;
+    font-size: 39.81px;
+    line-height: 49px;
+    font-weight: 500;
 }
 h2,
 .h2 {
@@ -91,6 +85,22 @@ h5,
   font-weight: 400;
   margin: 0;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--time);
+}
+p {
+    margin: 0 0 1em;
+}
+img {
+  max-width: 100%;
+}
+.container {
+    width: 1120px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
 /* swiper customization */
 .swiper-button-next,
 .swiper-button-prev {
@@ -548,7 +558,18 @@ h5,
 .main-slider-item img {
     object-fit: cover;
 }
-
+/* h1 seo block */
+.h1-seo-block {
+    padding: 50px 20px;
+    order: 3;
+}
+.h1-seo-block h1 {
+    color: var(--grey-90);
+}
+.h1-seo-block p {
+    font-weight: 700;
+    color: var(--grey-60);
+}
 /* media 1600- */
 @media (max-width: 1600px) {
   .hero-banner {
@@ -704,6 +725,9 @@ h5,
   .header-main .header-categories {
     border-color: var(--white);
   }
+  .footer {
+    margin-top: 69px;
+  }
   .footer-social-links {
     padding-right: 10px;
     margin-bottom: -20px;
@@ -788,6 +812,7 @@ h5,
     background-size: 16px;
     -webkit-appearance: none;
     -moz-appearance: none;
+    appearance: none;
     padding-right: 26px;
     color: var(--grey-70)
   }
@@ -843,6 +868,12 @@ h5,
 }
 /* media 750- */
 @media (max-width: 749px) {
+  h1,
+  .h1 {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 600;
+  }
   h2,
   .h2 {
     font-size: 19.2px;
@@ -865,6 +896,9 @@ h5,
     height: 38px;
     background-size: 13px;
     margin-top: -19px;
+  }
+  .footer {
+    margin-top: 0;
   }
   .hero-banner {
     height: 472px;
@@ -947,6 +981,14 @@ h5,
   }
   .main-actions-slider .main-slider-item {
     width: 280px;
+  }
+  .h1-seo-block {
+    padding: 90px 20px 60px;
+  }
+  .h1-seo-block p {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
   }
 }
 /* media 425- */
