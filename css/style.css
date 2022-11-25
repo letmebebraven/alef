@@ -1158,7 +1158,7 @@ img {
     margin: 5px 0;
     padding: 0 9px 10px 7px;
     justify-content: flex-start;
-    height: 87px;
+    height: auto;
   }
   .catalog-item-label {
     margin-bottom: 3px;
@@ -1182,6 +1182,15 @@ img {
     display: none;
   }
   .catalog-item-colors label {
+    display: none;
+  }
+  .main-slider-item .catalog-item-label {
+    display: none;
+  }
+  .main-slider-item .catalog-item-price-sale {
+    color: inherit;
+  }
+  .main-slider-item .catalog-item-price-old {
     display: none;
   }
   .h1-seo-block {
