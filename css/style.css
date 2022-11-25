@@ -75,18 +75,21 @@ h2,
   font-size: 33.18px;
   line-height: 40px;
   font-weight: 700;
+  margin: 0 0 30px;
 }
 h4,
 .h4 {
     font-size: 23.04px;
     line-height: 28px;
     font-weight: 400;
+    margin: 0;
 }
 h5,
 .h5 {
   font-size: 19.2px;
   line-height: 23px;
   font-weight: 400;
+  margin: 0;
 }
 /* swiper customization */
 .swiper-button-next,
@@ -482,6 +485,7 @@ h5,
   padding: 340px 20px;
   text-transform: uppercase;
   color: var(--white);
+  margin: 0;
 }
 .main-cat-slider .swiper-button-next,
 .main-cat-slider .swiper-button-prev {
@@ -502,6 +506,26 @@ h5,
 }
 .main-salespiont-img {
     margin-bottom: 30px;
+}
+/* main sliders */
+.main-slider-block {
+    padding: 90px 20px 0;
+    overflow: hidden;
+}
+.main-slider {
+    overflow: visible;
+}
+.main-new-title {
+    margin-bottom: 30px;
+}
+.main-new-link {
+    position: absolute;
+    top: 96px;
+    right: 20px;
+}
+/* catalog slider item */
+.main-slider-item img {
+    object-fit: cover;
 }
 /* media 1600- */
 @media (max-width: 1600px) {
@@ -729,6 +753,9 @@ h5,
     font-size: 12px;
     line-height: 15px;
   }
+  .main-slider-item {
+    width: 321px;
+  }
 }
 /* media 768- */
 @media (max-width: 767px) {
@@ -779,6 +806,11 @@ h5,
   .h2 {
     font-size: 19.2px;
     line-height: 23px;
+  }
+  h4,
+  .h4 {
+    font-size: 12px;
+    line-height: 15px;
   }
   h5,
   .h5 {
@@ -859,6 +891,13 @@ h5,
   .main-salespoint {
     grid-template-columns: repeat(2,1fr);
     grid-gap: 60px;
+    order: 2;
+  }
+  .main-slider-block {
+    padding: 50px 10px 0;
+  }
+  .main-new-link {
+    top: 54px;
   }
 }
 /* media 425- */

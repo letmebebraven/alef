@@ -13,3 +13,24 @@ const swiperMainCategories = new Swiper('.main-cat-slider', {
         }
       }
 });
+const swiperMainNew = new Swiper('.main-new-slider', {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    breakpoints: {
+        750: {
+            slidesPerView: 'auto',
+            spaceBetween: 20
+          },
+        1025: {
+          slidesPerView: 3
+        },
+        1160: {
+          slidesPerView: 4
+        },
+        1540: {
+            slidesPerView: 5
+          }
+      }
+}
+
+);
