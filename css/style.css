@@ -598,6 +598,9 @@ img {
     width: 100%;
     display: block;
 }
+.catalog-item-photo picture {
+    display: flex;
+}
 .catalog-item-info {
     height: 99px;
     display: flex;
@@ -612,26 +615,30 @@ img {
     justify-content: center;
     background: var(--white-70);
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     z-index: 4;
-    opacity: 0;
     pointer-events: none;
     transition: var(--time);
-    transform: translateY(-100%);
+    transform: translateY(100%);
+    text-align: center;
 }
 .catalog-item:hover .catalog-item-sizes {
-    opacity: 1;
-    pointer-events: all;
+    transform: translateY(0);
 }
 .catalog-item-sizes-block {
     margin: 16px 0 0;
     padding: 0;
     display: flex;
-    list-style: none;
 }
-.catalog-item-sizes-block li:not(:last-child) {
+.catalog-item-sizes-block button {
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.catalog-item-sizes-block button:not(:last-child) {
     margin-right: 22px;
 }
 .catalog-item-label {
