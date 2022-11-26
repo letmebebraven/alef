@@ -71,8 +71,8 @@ const swiperMainActions = new Swiper('.main-actions-slider', {
         }
       }
 });
+//photo slider catalog item
 const catalogItemSlider = document.querySelectorAll('.catalog-item-photo');
-
 for( i=0; i< catalogItemSlider.length; i++ ) {
     
     catalogItemSlider[i].classList.add('catalog-item-photo-' + i);
@@ -89,5 +89,12 @@ for( i=0; i< catalogItemSlider.length; i++ ) {
             type: 'bullets',
           },
     });
-
 }
+//header scroll trigger
+window.addEventListener('scroll', function() {
+    if(window.pageYOffset > 200) {
+        header.classList.remove('header-main')
+    } else {
+        header.classList.add('header-main')
+    } 
+});

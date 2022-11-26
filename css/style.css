@@ -94,7 +94,6 @@ h5,
 a {
   text-decoration: none;
   color: inherit;
-  transition: var(--time);
 }
 p {
     margin: 0 0 1em;
@@ -153,6 +152,8 @@ img {
 .header {
   width: 100%;
   z-index: 10;
+  position: fixed;
+  background: var(--white);
 }
 .header-notification {
   background: var(--red);
@@ -230,6 +231,9 @@ img {
 .header-logo {
   display: flex;
 }
+.header-logo svg {
+    fill: var(--logo-red);
+}
 .header-categories {
   margin: 0 -15px;
   padding: 0;
@@ -287,10 +291,13 @@ img {
 .header-main {
   font-weight: 700;
   color: var(--white);
-  position: absolute;
+  background: transparent;
 }
 .header-main .header-topline {
   border-color: var(--white);
+}
+.header-main .header-logo svg {
+    fill: var(--white);
 }
 .header-main .header-icons svg {
   fill: var(--white);
