@@ -272,8 +272,8 @@ img {
   bottom: 0;
   transform: translateY(100%);
   font-weight: 400;
-  /* opacity: 0; */
-  /* pointer-events: none; */
+  opacity: 0;
+  pointer-events: none;
   transition: var(--time);
   display: flex;
   flex-direction: column;
