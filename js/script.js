@@ -1,6 +1,8 @@
+//stories mainpage
 const swiperStories = new Swiper('.stories-slider', {
     slidesPerView: 'auto',
 });
+//categories mainpage
 const swiperMainCategories = new Swiper('.main-cat-slider', {
     slidesPerView: 1,
     navigation: {
@@ -13,6 +15,7 @@ const swiperMainCategories = new Swiper('.main-cat-slider', {
         }
       }
 });
+//slider new goods mainpage
 const swiperMainNew = new Swiper('.main-new-slider', {
     slidesPerView: 2,
     spaceBetween: 10,
@@ -34,8 +37,8 @@ const swiperMainNew = new Swiper('.main-new-slider', {
             spaceBetween: 20
           }
       }
-    }
-);
+});
+//slider hits mainpage
 const swiperMainHit = new Swiper('.main-hit-slider', {
     slidesPerView: 2,
     spaceBetween: 10,
@@ -57,8 +60,8 @@ const swiperMainHit = new Swiper('.main-hit-slider', {
             spaceBetween: 20
           }
       }
-    }
-);
+});
+//slider actions mainpage
 const swiperMainActions = new Swiper('.main-actions-slider', {
     slidesPerView: 'auto',
     spaceBetween: 20,
@@ -67,5 +70,24 @@ const swiperMainActions = new Swiper('.main-actions-slider', {
           slidesPerView: 4
         }
       }
-    }
-);
+});
+const catalogItemSlider = document.querySelectorAll('.catalog-item-photo');
+
+for( i=0; i< catalogItemSlider.length; i++ ) {
+    
+    catalogItemSlider[i].classList.add('catalog-item-photo-' + i);
+
+    var slider = new Swiper('.catalog-item-photo-' + i, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.catalog-item-photo-' + i + ' .swiper-button-next',
+            prevEl: '.catalog-item-photo-' + i + ' .swiper-button-prev',
+          },
+          pagination: {
+            el: '.catalog-item-photo-' + i + ' .swiper-pagination',
+            type: 'bullets',
+          },
+    });
+
+}
