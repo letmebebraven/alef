@@ -91,8 +91,8 @@
     margin-top: 60px;
     opacity: 0;
     pointer-events: none;
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
@@ -104,8 +104,8 @@
   .dl-menuwrapper .dl-menu.dl-menuopen {
     opacity: 1;
     pointer-events: auto;
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
   }
 
   /* Hide the inner submenus */
@@ -147,8 +147,8 @@ All this is done for any sub-level being entered.
   /* Animation classes for moving out and in */
 
   .dl-menu.dl-animate-out-1 {
-    -webkit-animation: MenuAnimOut1 0.4s;
-    animation: MenuAnimOut1 0.4s;
+    -webkit-animation: MenuAnimOut1 0.01ms;
+    animation: MenuAnimOut1 0.01ms;
   }
 
   .dl-menu.dl-animate-out-2 {
@@ -175,16 +175,8 @@ All this is done for any sub-level being entered.
 @-webkit-keyframes MenuAnimOut1 {
   0% {
   }
-  50% {
-    -webkit-transform: translateZ(-250px) rotateY(30deg);
-  }
-  75% {
-    -webkit-transform: translateZ(-372.5px) rotateY(15deg);
-    opacity: 0.5;
-  }
   100% {
-    -webkit-transform: translateZ(-500px) rotateY(0deg);
-    opacity: 0;
+    -webkit-transform: translateX(-100%);
   }
 }
 
@@ -227,19 +219,9 @@ All this is done for any sub-level being entered.
 @keyframes MenuAnimOut1 {
   0% {
   }
-  50% {
-    -webkit-transform: translateZ(-250px) rotateY(30deg);
-    transform: translateZ(-250px) rotateY(30deg);
-  }
-  75% {
-    -webkit-transform: translateZ(-372.5px) rotateY(15deg);
-    transform: translateZ(-372.5px) rotateY(15deg);
-    opacity: 0.5;
-  }
   100% {
-    -webkit-transform: translateZ(-500px) rotateY(0deg);
-    transform: translateZ(-500px) rotateY(0deg);
-    opacity: 0;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
 
@@ -284,8 +266,8 @@ All this is done for any sub-level being entered.
 }
 
 .dl-menu.dl-animate-in-1 {
-  -webkit-animation: MenuAnimIn1 0.3s;
-  animation: MenuAnimIn1 0.3s;
+  -webkit-animation: MenuAnimIn1 0.01ms;
+  animation: MenuAnimIn1 0.01ms;
 }
 
 .dl-menu.dl-animate-in-2 {
@@ -310,16 +292,10 @@ All this is done for any sub-level being entered.
 
 @-webkit-keyframes MenuAnimIn1 {
   0% {
-    -webkit-transform: translateZ(-500px) rotateY(0deg);
-    opacity: 0;
-  }
-  20% {
-    -webkit-transform: translateZ(-250px) rotateY(30deg);
-    opacity: 0.5;
+    -webkit-transform: translateX(-100%);
   }
   100% {
-    -webkit-transform: translateZ(0px) rotateY(0deg);
-    opacity: 1;
+    -webkit-transform: translateX(0px)
   }
 }
 
@@ -369,19 +345,10 @@ All this is done for any sub-level being entered.
 
 @keyframes MenuAnimIn1 {
   0% {
-    -webkit-transform: translateZ(-500px) rotateY(0deg);
-    transform: translateZ(-500px) rotateY(0deg);
-    opacity: 0;
-  }
-  20% {
-    -webkit-transform: translateZ(-250px) rotateY(30deg);
-    transform: translateZ(-250px) rotateY(30deg);
-    opacity: 0.5;
+    -webkit-transform: translateX(-100%);
   }
   100% {
-    -webkit-transform: translateZ(0px) rotateY(0deg);
-    transform: translateZ(0px) rotateY(0deg);
-    opacity: 1;
+    -webkit-transform: translateX(0px);
   }
 }
 
@@ -438,8 +405,8 @@ All this is done for any sub-level being entered.
 }
 
 .dl-menuwrapper > .dl-submenu.dl-animate-in-1 {
-  -webkit-animation: SubMenuAnimIn1 0.4s ease;
-  animation: SubMenuAnimIn1 0.4s ease;
+  -webkit-animation: SubMenuAnimIn1 0.01ms ease;
+  animation: SubMenuAnimIn1 0.01ms ease;
 }
 
 .dl-menuwrapper > .dl-submenu.dl-animate-in-2 {
@@ -464,12 +431,10 @@ All this is done for any sub-level being entered.
 
 @-webkit-keyframes SubMenuAnimIn1 {
   0% {
-    -webkit-transform: translateX(50%);
-    opacity: 0;
+    -webkit-transform: translateX(-100%);
   }
   100% {
     -webkit-transform: translateX(0px);
-    opacity: 1;
   }
 }
 
@@ -519,14 +484,10 @@ All this is done for any sub-level being entered.
 
 @keyframes SubMenuAnimIn1 {
   0% {
-    -webkit-transform: translateX(50%);
-    transform: translateX(50%);
-    opacity: 0;
+    -webkit-transform: translateX(-100%);
   }
   100% {
     -webkit-transform: translateX(0px);
-    transform: translateX(0px);
-    opacity: 1;
   }
 }
 
@@ -583,8 +544,8 @@ All this is done for any sub-level being entered.
 }
 
 .dl-menuwrapper > .dl-submenu.dl-animate-out-1 {
-  -webkit-animation: SubMenuAnimOut1 0.4s ease;
-  animation: SubMenuAnimOut1 0.4s ease;
+  -webkit-animation: SubMenuAnimOut1 0.01ms ease;
+  animation: SubMenuAnimOut1 0.01ms ease;
 }
 
 .dl-menuwrapper > .dl-submenu.dl-animate-out-2 {
@@ -610,11 +571,9 @@ All this is done for any sub-level being entered.
 @-webkit-keyframes SubMenuAnimOut1 {
   0% {
     -webkit-transform: translateX(0%);
-    opacity: 1;
   }
   100% {
-    -webkit-transform: translateX(50%);
-    opacity: 0;
+    -webkit-transform: translateX(100%);
   }
 }
 
@@ -665,13 +624,9 @@ All this is done for any sub-level being entered.
 @keyframes SubMenuAnimOut1 {
   0% {
     -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-    opacity: 1;
   }
   100% {
-    -webkit-transform: translateX(50%);
-    transform: translateX(50%);
-    opacity: 0;
+    -webkit-transform: translateX(100%);
   }
 }
 

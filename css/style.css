@@ -1286,7 +1286,7 @@ img {
   .dl-menu.dl-subview li.dl-subviewopen > a::after {
     content: none;
   }
-  li.dl-back {
+  .dl-subviewopen li.dl-back {
     position: absolute;
     top: -61px;
   }
