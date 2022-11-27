@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/dlmenu.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -33,26 +34,30 @@
                 <li><a href="#">Войти</a></li>
             </ul>
         </div>
-        <div class="header-mainline">
-            <button type="button" class="header-burger-menu">
-                <svg width="21.75" height="18"><use xlink:href="img/sprite.svg#menu-icon"></use></svg>
+        <div class="header-mainline dl-menuwrapper" id="dl-menu">
+            <button type="button" class="header-burger-menu dl-trigger">
+                <svg width="21.75" height="18" viewBox="0 0 22 19"><use xlink:href="img/sprite.svg#menu-icon"></use></svg>
                 Меню
             </button>
             <a class="header-logo">
                 <svg width="117" height="30"><use xlink:href="img/sprite.svg#main-logo"></use></svg>
             </a>
-            <ul class="header-categories">
-                <li><a href="#">Шубы и меха</a></li>
+            <button type="button" class="header-burger-close dl-trigger">
+                <svg width="16" height="16" viewBox="0 0 13 12"><use xlink:href="img/sprite.svg#close-icon"></use></svg>
+                Закрыть
+            </button>
+            <ul class="header-categories dl-menu">
+                <li class="dl-mobile-hidden"><a href="#">Шубы и меха</a></li>
                 <li><a href="#">Новинки</a></li>
-                <li class="header-categories-toggle">
+                <li class="header-categories-toggle header-category-main">
                     <a href="#">Женщинам</a>
-                    <ul class="header-categories-dropdown dropdown-1">
+                    <ul class="header-categories-dropdown dropdown-1 dl-submenu">
                         <li>
                             <a href="#">Шубы</a>
-                            <ul class="dropdown-2">
+                            <ul class="dropdown-2 dl-submenu">
                                 <li>
                                     <a href="#">Шубы из экомеха</a>
-                                    <ul class="dropdown-3">
+                                    <ul class="dropdown-3 dl-submenu">
                                         <li><a href="#">Длинные</a></li>
                                         <li><a href="#">Короткие</a></li>
                                         <li><a href="#">Полушубки</a></li>
@@ -69,7 +74,7 @@
                         <li class="dropdown-sale"><a href="#">Зимняя распродажа до -60%</a></li>
                         <li>
                             <a href="#">Пальто</a>
-                            <ul class="dropdown-2">
+                            <ul class="dropdown-2 dl-submenu">
                                 <li><a href="#">Двубортные</a></li>
                                 <li><a href="#">Классические</a></li>
                                 <li><a href="#">Короткие</a></li>
@@ -79,7 +84,7 @@
                         </li>
                         <li>
                             <a href="#">Куртки</a>
-                            <ul class="dropdown-2">
+                            <ul class="dropdown-2 dl-submenu">
                                 <li><a href="#">Демисезонные</a></li>
                                 <li><a href="#">Короткие</a></li>
                                 <li><a href="#">С капюшоном</a></li>
@@ -87,7 +92,7 @@
                         </li>
                         <li>
                             <a href="#">Кожаные куртки</a>
-                            <ul class="dropdown-2">
+                            <ul class="dropdown-2 dl-submenu">
                                 <li><a href="#">Классические</a></li>
                                 <li><a href="#">Косухи</a></li>
                                 <li><a href="#">Пилот/Авиатор</a></li>
@@ -97,7 +102,7 @@
                         </li>
                         <li>
                             <a href="#">Дубленки</a>
-                            <ul class="dropdown-2">
+                            <ul class="dropdown-2 dl-submenu">
                                 <li><a href="#">Длинные</a></li>
                                 <li><a href="#">Короткие</a></li>
                                 <li><a href="#">С капюшоном</a></li>
@@ -105,15 +110,31 @@
                         </li>
                         <li>
                             <a href="#">Жилеты</a>
-                            <ul class="dropdown-2">
+                            <ul class="dropdown-2 dl-submenu">
                                 <li><a href="#">Жилеты текстильные</a></li>
                                 <li><a href="#">Жилеты из песца</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-                <li><a href="#">Девочкам</a></li>
-                <li class="header-categories-accent"><a href="#">распродажа</a></li>
+                <li class="header-category-main"><a href="#">Девочкам</a></li>
+                <li class="header-categories-accent"><a href="#">Зимняя <span>распродажа</span> до -60%</a></li>
+                <li class="header-categories-personal dl-hidden">
+                    <ul>
+                        <li><a href="#">
+                            <svg width="17" height="20" viewBox="0 0 17 20"><use xlink:href="img/sprite.svg#personal-icon"></use></svg>
+                            Личный кабинет
+                        </a></li>
+                        <li><a href="#">Условия доставки</a></li>
+                        <li><a href="#">Оплата</a></li>
+                        <li><a href="#">Рассрочка</a></li>
+                        <li><a href="#">Вернуть товар</a></li>
+                    </ul>
+                </li>
+                <li class="dl-hidden header-contacts-mobile">
+                    <a href="tel:+78003006535">8(800)300-65-35</a>
+                    <span>9:00 - 19:00 МСК</span>
+                </li>
             </ul>
             <ul class="header-icons">
                 <li class="header-icons-search">
@@ -938,7 +959,9 @@
         </div>
     </footer>
 
-    
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/jquery.dlmenu.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>

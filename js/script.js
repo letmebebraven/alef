@@ -97,3 +97,14 @@ window.addEventListener("scroll", function () {
     header.classList.add("header-main");
   }
 });
+// jquery modules
+$(function() {
+    if(window.innerWidth < 768) {
+        $('#dl-menu').dlmenu();
+        $('.dl-trigger').on('click', function() {
+          $('.dl-menuwrapper').toggleClass('dl-menu-active')
+        })
+    }
+  
+});
+
