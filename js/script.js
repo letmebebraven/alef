@@ -109,6 +109,7 @@ $(function () {
         $('.hide-siblings').removeClass('hide-siblings');
         $('.submenu-parent').removeClass('submenu-parent');
         $(".js-menu").removeClass("submenu-active");
+        $(".on-top").removeClass("on-top");
       });
       $(".js-submenu-trigger").on("click", function () {
         $(this).siblings(".js-submenu").addClass("js-submenu-active");
