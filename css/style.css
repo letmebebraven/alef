@@ -1307,9 +1307,6 @@ img {
   .header-categories .dropdown-2 {
     margin: 0;
   }
-  .header-categories li.js-back-trigger a {
-    font-weight: 700;
-  }
   .js-back-trigger::after {
     position: absolute;
     top: 0;
@@ -1336,6 +1333,11 @@ img {
   }
   .header-categories .dropdown-3 > li a {
     text-transform: none;
+  }
+  .header-categories li.js-back-trigger a {
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-right: 60px;
   }
 }
 /* media 750- */
