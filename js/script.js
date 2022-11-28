@@ -136,17 +136,4 @@ $(function () {
   }
 
   burgerInit();
-
-  $(window).resize(function() {
-    burgerInit();
-
-    if(window.innerWidth > 1024) {
-    } else {
-      $(".js-menu").removeClass("menu-active");
-      $(".js-submenu-active").removeClass("js-submenu-active");
-      $(".page").removeClass("no-scroll");
-
-      burgerInit();
-    }
-  })
 });
