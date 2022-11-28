@@ -10,7 +10,7 @@ const swiperMainCategories = new Swiper(".main-cat-slider", {
     prevEl: ".main-cat-slider .swiper-button-prev",
   },
   breakpoints: {
-    1025: {
+    1024: {
       slidesPerView: 2,
     },
   },
@@ -24,7 +24,7 @@ const swiperMainNew = new Swiper(".main-new-slider", {
       slidesPerView: "auto",
       spaceBetween: 20,
     },
-    1025: {
+    1024: {
       slidesPerView: 3,
       spaceBetween: 20,
     },
@@ -47,7 +47,7 @@ const swiperMainHit = new Swiper(".main-hit-slider", {
       slidesPerView: "auto",
       spaceBetween: 20,
     },
-    1025: {
+    1024: {
       slidesPerView: 3,
       spaceBetween: 20,
     },
@@ -66,7 +66,7 @@ const swiperMainActions = new Swiper(".main-actions-slider", {
   slidesPerView: "auto",
   spaceBetween: 20,
   breakpoints: {
-    1025: {
+    1024: {
       slidesPerView: 4,
     },
   },
@@ -98,20 +98,41 @@ window.addEventListener("scroll", function () {
   }
 });
 // jquery menu
-$(function() {
-    if(window.innerWidth < 768) {
-        $('.js-menu-trigger').on('click', function() {
-          $('.js-menu').toggleClass('menu-active');
-          if($('.js-submenu-active')){
-            $('.js-submenu-active').removeClass('js-submenu-active');
-          }
-        });
-        $('.js-submenu-trigger').on('click', function() {
-          $(this).siblings('.js-submenu').addClass('js-submenu-active');
-        })
-        $('.js-back-trigger').on('click', function() {
-          $(this).parent('.js-submenu').removeClass('js-submenu-active');
-        })
+$(function () {
+  function burgerInit() {
+    if (window.innerWidth <= 1024) {
+      $(".js-menu-trigger").on("click", function () {
+        $(".js-menu").toggleClass("menu-active");
+        $(".page").toggleClass("no-scroll");
+        $(".menu-active .header-categories").mCustomScrollbar();
+        $(".menu-active .js-submenu").mCustomScrollbar();
+        if ($(".js-submenu-active")) {
+          $(".js-submenu-active").removeClass("js-submenu-active");
+        }
+      });
+      $(".js-submenu-trigger").on("click", function () {
+        $(this).siblings(".js-submenu").addClass("js-submenu-active");
+      });
+      $(".js-back-trigger").on("click", function () {
+        $(this).closest(".js-submenu").removeClass("js-submenu-active");
+      });
     }
-});
+  }
 
+  burgerInit();
+
+  $(window).resize(function() {
+    burgerInit();
+
+    if(window.innerWidth > 1024) {
+      $(".menu-active .header-categories").mCustomScrollbar("destroy");
+      $(".menu-active .js-submenu").mCustomScrollbar("destroy");
+    } else {
+      $(".js-menu").removeClass("menu-active");
+      $(".js-submenu-active").removeClass("js-submenu-active");
+      $(".page").removeClass("no-scroll");
+
+      burgerInit();
+    }
+  })
+});
