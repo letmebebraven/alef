@@ -59,7 +59,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
-.page.no-scroll {
+.no-scroll {
   overflow: hidden;
 }
 main {
@@ -1094,7 +1094,7 @@ img {
   .menu-active .header-categories {
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 59px;
     width: 100%;
     height: calc(100vh - 60px);
     padding: 0;
@@ -1189,7 +1189,7 @@ img {
     top: -61px;
     opacity: 1;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     transform: translateX(100vw);
     z-index: 10;
     padding: 0;
@@ -1199,13 +1199,24 @@ img {
   .menu-active .header-categories .js-submenu a {
     padding-left: 49px;
   }
+  .header-categories .js-submenu {
+    display: none;
+  }
   .header-categories .js-submenu-active {
     transform: translateX(0vw);
     position: fixed;
     top: 0;
+    display: flex;
+  }
+  .header-categories .js-submenu-active {
+    transform: translateX(0vw);
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
   }
   .header-categories .dropdown-1.js-submenu-active {
-    top: -61px;
+    top: -60px;
   }
   .header-categories .dropdown-1 > div {
     width: 100%;
@@ -1229,7 +1240,7 @@ img {
   .header-categories .dropdown-2 > li:not(:last-child) {
     margin-bottom: 0;
   }
-  .header-categories .dropdown-3 {
+  .header-categories .js-submenu-active.dropdown-3 {
     display: flex;
     flex-direction: column;
   }
@@ -1250,26 +1261,12 @@ img {
     text-transform: uppercase;
     padding-right: 60px;
   }
-  /* mcb customs */
-  .mCSB_inside > .mCSB_container {
-    margin-right: 0;
-    display: flex;
+
+  .submenu-active .header-categories-item:not(.hide-siblings){
+    display: none;
   }
-  .menu-active .mCSB_inside > .mCSB_container {
-    flex-direction: column;
-    min-height: 100%;
-  }
-  .menu-active .mCSB_2_scrollbar_vertical {
-    opacity: 0;
-  }
-  .menu-active .header-categories .mCustomScrollBox {
-    /* border-top: 1px solid var(--grey-10); */
-  }
-  .menu-active .header-categories .mCSB_inside > .mCSB_container {
-    /* margin-top: -1px; */
-  }
-  .mCSB_scrollTools {
-    visibility: hidden;
+  .submenu-parent > div:not(.hide-siblings) {
+    display: none;
   }
 }
 /* media 1023- */
@@ -1314,6 +1311,11 @@ img {
     width: 100vw;
     height: 100vh;
     background: var(--white);
+    overflow: hidden auto;
+    z-index: -1;
+  }
+  .menu-active .header-navigation.on-top {
+    z-index: 20;
   }
   .header-categories {
     padding: 0 5px;
@@ -1330,6 +1332,7 @@ img {
   }
   .header-categories .dropdown-1 {
     padding: 0;
+    flex-wrap: nowrap;
   }
 
   .header-icons {
