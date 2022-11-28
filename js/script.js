@@ -97,14 +97,21 @@ window.addEventListener("scroll", function () {
     header.classList.add("header-main");
   }
 });
-// jquery modules
+// jquery menu
 $(function() {
     if(window.innerWidth < 768) {
-        $('#dl-menu').dlmenu();
-        $('.dl-trigger').on('click', function() {
-          $('.dl-menuwrapper').toggleClass('dl-menu-active')
+        $('.js-menu-trigger').on('click', function() {
+          $('.js-menu').toggleClass('menu-active');
+          if($('.js-submenu-active')){
+            $('.js-submenu-active').removeClass('js-submenu-active');
+          }
+        });
+        $('.js-submenu-trigger').on('click', function() {
+          $(this).siblings('.js-submenu').addClass('js-submenu-active');
+        })
+        $('.js-back-trigger').on('click', function() {
+          $(this).parent('.js-submenu').removeClass('js-submenu-active');
         })
     }
-  
 });
 
