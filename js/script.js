@@ -109,14 +109,16 @@ $(function () {
     $(".js-menu").removeClass("submenu-active");
     $(".on-top").removeClass("on-top");
   });
-  $(".menu-active .js-submenu-trigger").on("click", function () {
-    $(this).siblings(".js-submenu").addClass("js-submenu-active");
-    $(".header-navigation").addClass("on-top");
-    $(".js-menu").addClass("submenu-active");
+  $(".js-submenu-trigger").on("click", function () {
+    if ($(".js-menu").is(".menu-active")) {
+      $(this).siblings(".js-submenu").addClass("js-submenu-active");
+      $(".header-navigation").addClass("on-top");
+      $(".js-menu").addClass("submenu-active");
 
-    $(this).closest(".header-categories-item").addClass("hide-siblings");
-    $(this).closest(".js-submenu-active").addClass("submenu-parent");
-    $(this).closest(".js-submenu-active div").addClass("hide-siblings");
+      $(this).closest(".header-categories-item").addClass("hide-siblings");
+      $(this).closest(".js-submenu-active").addClass("submenu-parent");
+      $(this).closest(".js-submenu-active div").addClass("hide-siblings");
+    }
   });
 
   $(".js-back-trigger").on("click", function () {
