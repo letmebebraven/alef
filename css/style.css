@@ -309,7 +309,7 @@ img {
   margin: 20px 0 0;
   font-weight: 500;
 }
-.header-categories .dropdown-2 > li:not(:last-child) {
+.header-categories .dropdown-2 > div:not(:last-child) {
   margin-bottom: 10px;
 }
 .header-categories .dropdown-3 {
@@ -825,6 +825,7 @@ img {
 .header-categories .menu-hidden {
   display: none;
 }
+
 /* media 1600- */
 @media (max-width: 1600px) {
   .hero-banner {
