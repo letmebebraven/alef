@@ -111,7 +111,7 @@ $(function () {
         $(".js-menu").removeClass("submenu-active");
         $(".on-top").removeClass("on-top");
       });
-      $(".js-submenu-trigger").on("click", function () {
+      $(".menu-active .js-submenu-trigger").on("click", function () {
         $(this).siblings(".js-submenu").addClass("js-submenu-active");
         $(".header-navigation").addClass("on-top");
         $(".js-menu").addClass("submenu-active");
