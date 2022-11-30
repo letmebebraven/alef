@@ -1063,6 +1063,10 @@ img {
   font-size: 12px;
   line-height: 15px;
   text-align: center;
+  transition: var(--time);
+}
+.header-cart-popup-link:hover {
+  background-color: var(--grey-70);
 }
 /* media 1600- */
 @media (max-width: 1600px) {
