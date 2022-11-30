@@ -139,85 +139,107 @@ $(function () {
     return false;
   });
   // jquery search front
-  $('.header-search-trigger').on('click', function() {
-    $('.header-search').addClass('header-search-open');
+  $(".header-search-trigger").on("click", function () {
+    $(".header-search").addClass("header-search-open");
     $(".page").toggleClass("no-scroll");
     return false;
   });
 
-  $('html').on('click', function(e) {
-    if(($('.header-search-open').length) && !$(e.target).closest('.header-search-open').length){
-      $('.header-search-open').removeClass('header-search-open');
+  $("html").on("click", function (e) {
+    if (
+      $(".header-search-open").length &&
+      !$(e.target).closest(".header-search-open").length
+    ) {
+      $(".header-search-open").removeClass("header-search-open");
       $(".page").toggleClass("no-scroll");
-      $('.header-search-prev').hide();
-      $('.header-search-result').removeClass('header-search-result-open');
-      $('.header-search-input').val("");
-      if($(window).width() <= 1024) {
-        $('.header-search-reset').removeClass('header-search-reset-mobile');
+      $(".header-search-prev").hide();
+      $(".header-search-result").removeClass("header-search-result-open");
+      $(".header-search-input").val("");
+      if ($(window).width() <= 1024) {
+        $(".header-search-reset").removeClass("header-search-reset-mobile");
       }
     }
     return false;
   });
 
-  $('.header-search-back').on('click', function() {
-      $('.header-search-open').removeClass('header-search-open');
-      $(".page").toggleClass("no-scroll");
-      $('.header-search-prev').hide();
-      $('.header-search-result').removeClass('header-search-result-open');
-      $('.header-search-input').val("");
-      $('.header-search-reset').removeClass('header-search-reset-mobile');
-      return false;
+  $(".header-search-back").on("click", function () {
+    $(".header-search-open").removeClass("header-search-open");
+    $(".page").toggleClass("no-scroll");
+    $(".header-search-prev").hide();
+    $(".header-search-result").removeClass("header-search-result-open");
+    $(".header-search-input").val("");
+    $(".header-search-reset").removeClass("header-search-reset-mobile");
+    return false;
   });
 
-  $('.header-search-input').focus(function() {
-    if(!$('.header-search-input').val() && $('.header-search-prev').is(':hidden') && $('.header-search-prev-item').length) {
-      $('.header-search-prev').show();
+  $(".header-search-input").focus(function () {
+    if (
+      !$(".header-search-input").val() &&
+      $(".header-search-prev").is(":hidden") &&
+      $(".header-search-prev-item").length
+    ) {
+      $(".header-search-prev").show();
     }
   });
 
-  $('.header-search-reset').on('click', function() {
-    if(!$('.header-search-input').val()) {
-      $('.header-search-open').removeClass('header-search-open');
+  $(".header-search-reset").on("click", function () {
+    if (!$(".header-search-input").val()) {
+      $(".header-search-open").removeClass("header-search-open");
       $(".page").toggleClass("no-scroll");
-      $('.header-search-prev').hide();
-      $('.header-search-result').removeClass('header-search-result-open');
+      $(".header-search-prev").hide();
+      $(".header-search-result").removeClass("header-search-result-open");
     } else {
-      $('.header-search-input').val("");
-      if($('.header-search-prev-item').length) {
-        $('.header-search-prev').show();
+      $(".header-search-input").val("");
+      if ($(".header-search-prev-item").length) {
+        $(".header-search-prev").show();
       }
-      $('.header-search-result').removeClass('header-search-result-open');
-      if($(window).width() <= 1024) {
-        $('.header-search-reset').removeClass('header-search-reset-mobile');
+      $(".header-search-result").removeClass("header-search-result-open");
+      if ($(window).width() <= 1024) {
+        $(".header-search-reset").removeClass("header-search-reset-mobile");
       }
     }
     return false;
   });
 
-  $('.header-search-prev-reset').on('click', function() {
-    $(this).closest('.header-search-prev-item').remove();
-    if(!$('.header-search-prev-item').length) {
-      $('.header-search-prev').hide();
+  $(".header-search-prev-reset").on("click", function () {
+    $(this).closest(".header-search-prev-item").remove();
+    if (!$(".header-search-prev-item").length) {
+      $(".header-search-prev").hide();
     }
     return false;
-  })
+  });
 
-  $('.header-search-input').on('input', function() {
-    if($(this).val()) {
-      $('.header-search-result').addClass('header-search-result-open');
-      $('.header-search-prev').hide();
-      if($(window).width() <= 1024) {
-        $('.header-search-reset').addClass('header-search-reset-mobile');
+  $(".header-search-input").on("input", function () {
+    if ($(this).val()) {
+      $(".header-search-result").addClass("header-search-result-open");
+      $(".header-search-prev").hide();
+      if ($(window).width() <= 1024) {
+        $(".header-search-reset").addClass("header-search-reset-mobile");
       }
     } else {
-      if($('.header-search-prev-item').length) {
-        $('.header-search-result').removeClass('header-search-result-open');
-        $('.header-search-prev').show();
+      if ($(".header-search-prev-item").length) {
+        $(".header-search-result").removeClass("header-search-result-open");
+        $(".header-search-prev").show();
       }
-      if($(window).width() <= 1024) {
-        $('.header-search-reset').removeClass('header-search-reset-mobile');
+      if ($(window).width() <= 1024) {
+        $(".header-search-reset").removeClass("header-search-reset-mobile");
       }
     }
-  })
+  });
+  // header cart popup 
+  $('.header-cart-trigger').on('click', function() {
+    $('.header-cart-popup').toggleClass('header-cart-popup-active');
+    return false;
+  });
 
-})
+  $("html").on("click", function (e) {
+    if (
+      $(".header-cart-popup-active").length &&
+      !$(e.target).closest(".header-cart-popup-active").length
+    ) {
+      $(".header-cart-popup-active").removeClass("header-cart-popup-active");
+      
+    }
+    return false;
+  });
+});
