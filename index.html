@@ -146,10 +146,10 @@
             
             <ul class="header-icons">
                 <li class="header-icons-search">
-                    <a href="#">
+                    <button type="button" class="header-search-trigger">
                         <svg width="21" height="20"><use xlink:href="img/sprite.svg#search-icon"></use></svg>
                         Поиск
-                    </a>
+                    </button>
                 </li>
                 <li class="header-icons-personal">
                     <a href="#">
@@ -166,13 +166,144 @@
                 </li>
             </ul>
         </div>
+        <div class="header-search">
+            <div class="header-container">
+                <form action="#" method="get" class="header-search-form">
+                    <input type="text" class="header-search-input" placeholder="Поиск, например, шуба из экомеха">
+                    <button type="button" class="header-search-reset">
+                        <svg width="16" height="16" viewBox="0 0 13 12"><use xlink:href="img/sprite.svg#close-icon"></use></svg>
+                        Закрыть
+                    </button>
+                    <button type="button" class="header-search-back">
+                        Назад
+                    </button>
+                </form>
+                <div class="header-search-info">
+                    <div class="header-search-prev">
+                        <div class="header-search-title">Вы недавно искали</div>
+                        <div class="header-search-prev-list">
+                            <div class="header-search-prev-item">
+                                <a href="#">Пальто</a>
+                                <button type="button" class="header-search-prev-reset">
+                                    <svg width="16" height="16" viewBox="0 0 13 12"><use xlink:href="img/sprite.svg#close-icon"></use></svg>
+                                    Удалить
+                                </button>
+                            </div>
+                            <div href="#" class="header-search-prev-item">
+                                <a href="#">шуба экомех</a>
+                                <button type="button" class="header-search-prev-reset">
+                                    <svg width="16" height="16" viewBox="0 0 13 12"><use xlink:href="img/sprite.svg#close-icon"></use></svg>
+                                    Удалить
+                                </button>
+                            </div>
+                            <div href="#" class="header-search-prev-item">
+                                <a href="#">куртки теплые</a>
+                                <button type="button" class="header-search-prev-reset">
+                                    <svg width="16" height="16" viewBox="0 0 13 12"><use xlink:href="img/sprite.svg#close-icon"></use></svg>
+                                    Удалить
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-search-result">
+                        <div class="header-search-categories">
+                            <div class="header-search-title">Результаты поиска</div>
+                            <div class="header-search-categories-list">
+                                <a href="#" class="header-search-categories-item">
+                                    <span class="header-search-category-name"><b>Паль</b>то</span>
+                                    <span class="header-search-category-parent">Женщинам</span>
+                                </a>
+                                <a href="#" class="header-search-categories-item">
+                                    <span class="header-search-category-name"><b>Паль</b>то</span>
+                                    <span class="header-search-category-parent">девочкам</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header-search-products">
+                            <div class="header-search-products-item catalog-item">
+                                <a href="#" class="catalog-item-photo">
+                                    <picture>
+                                        <img src="img/search/item-1.jpg" alt="" width="67.5" height="90">
+                                    </picture>
+                                </a>
+                                <div class="catalog-item-info">
+                                    <div class="catalog-item-category">Женщинам / Пальто</div>
+                                    <div class="catalog-item-label"><span class="catalog-item-label-warm">Утеплённая</span></div>
+                                    <a href="#" class="catalog-item-name"><span>Паль</span>то из экомеха с капюшоном</a>
+                                    <div class="catalog-item-price">
+                                        20 790 руб.
+                                    </div>
+                                    <div class="catalog-item-colors">
+                                        4 цвета
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-search-products-item catalog-item">
+                                <a href="#" class="catalog-item-photo">
+                                    <picture>
+                                        <img src="img/search/item-2.jpg" alt="" width="67.5" height="90">
+                                    </picture>
+                                </a>
+                                <div class="catalog-item-info">
+                                    <div class="catalog-item-category">Женщинам / Пальто</div>
+                                    <div class="catalog-item-label"><span class="catalog-item-label-sale">-41%</span></div>
+                                    <a href="#" class="catalog-item-name">Классическое <span>паль</span>то из экомеха с принтом</a>
+                                    <div class="catalog-item-price">
+                                        <span class="catalog-item-price-sale">17 490 руб.</span>
+                                        <span class="catalog-item-price-old">31 800 руб.</span>
+                                    </div>
+                                    <div class="catalog-item-colors">
+                                        3 цвета
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-search-products-item catalog-item">
+                                <a href="#" class="catalog-item-photo">
+                                    <picture>
+                                        <img src="img/search/item-3.jpg" alt="" width="67.5" height="90">
+                                    </picture>
+                                </a>
+                                <div class="catalog-item-info">
+                                    <div class="catalog-item-category">Девочкам / Пальто</div>
+                                    <div class="catalog-item-label"><span class="catalog-item-label-new">Новинка</span></div>
+                                    <a href="#" class="catalog-item-name"><span>Паль</span>то</a>
+                                    <div class="catalog-item-price">
+                                        8 900 руб.
+                                    </div>
+                                    <div class="catalog-item-colors">
+                                        2 цвета
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-search-products-item catalog-item">
+                                <a href="#" class="catalog-item-photo">
+                                    <picture>
+                                        <img src="img/search/item-4.jpg" alt="" width="67.5" height="90">
+                                    </picture>
+                                </a>
+                                <div class="catalog-item-info">
+                                    <div class="catalog-item-category">Девочкам / Пальто</div>
+                                    <div class="catalog-item-label"><span class="catalog-item-label-sale">-41%</span></div>
+                                    <a href="#" class="catalog-item-name">Детское <span>паль</span>то с английским воротником</a>
+                                    <div class="catalog-item-price">
+                                        <span class="catalog-item-price-sale">6 490 руб.</span>
+                                        <span class="catalog-item-price-old">11 800 руб.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="header-search-result-all">Смотреть все результаты поиска</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     <main>
         <section class="hero-banner">
             <picture class="hero-banner-img">
                 <source media="(min-width:1125px)" srcset="img/hero/hero-banner.jpg">
                 <source media="(min-width:750px)" srcset="img/hero/hero-tablet.jpg">
-                <img src="img/hero/hero-tablet.jpg" alt="">
+                <img src="img/hero/hero-mobile.jpg" alt="">
             </picture>
             <div class="hero-offer">
                 <div class="hero-offer-date">/ 11.11 - 30.11 /</div>
