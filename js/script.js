@@ -141,6 +141,7 @@ $(function () {
   // jquery search front
   $(".header-search-trigger").on("click", function () {
     $(".header-search").addClass("header-search-open");
+    $(".header-cart-popup-active").removeClass("header-cart-popup-active");
     $(".page").toggleClass("no-scroll");
     return false;
   });
@@ -227,8 +228,13 @@ $(function () {
     }
   });
   // header cart popup 
+  
   $('.header-cart-trigger').on('click', function() {
-    $('.header-cart-popup').toggleClass('header-cart-popup-active');
+    if($(window).width() > 1024) {
+      $('.header-cart-popup').toggleClass('header-cart-popup-active');
+    } else {
+      window.location.href = $('.header-icons-cart a').attr('href');
+    }
     return false;
   });
 
@@ -238,8 +244,13 @@ $(function () {
       !$(e.target).closest(".header-cart-popup-active").length
     ) {
       $(".header-cart-popup-active").removeClass("header-cart-popup-active");
-      
     }
     return false;
   });
+
+  $(window).on('resize', function() {
+    if($(window).width() <= 1024){
+      $(".header-cart-popup-active").removeClass("header-cart-popup-active");
+    }
+  })
 });

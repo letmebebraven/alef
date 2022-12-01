@@ -334,7 +334,6 @@ img {
 .header-icons svg {
   fill: var(--black);
 }
-.header-cart-trigger:hover svg,
 .header-search-trigger:hover svg,
 .header-icons a:hover svg {
   opacity: 0.5;
@@ -354,12 +353,6 @@ img {
   position: absolute;
   top: -8.03px;
   right: -11.84px;
-}
-.header-cart-trigger {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
 }
 /* header mainpage */
 .header-main {
@@ -1703,10 +1696,6 @@ img {
   }
   .header-search-result-all {
     display: none;
-  }
-  .header-cart-popup {
-    right: -20px;
-    bottom: -16px;
   }
 }
 /* media 768- */
