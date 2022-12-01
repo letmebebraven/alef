@@ -350,18 +350,10 @@
     <main>
         <section class="hero-banner">
             <picture class="hero-banner-img">
-                <source media="(min-width:1125px)" srcset="img/hero/hero-banner.jpg">
-                <source media="(min-width:750px)" srcset="img/hero/hero-tablet.jpg">
-                <img src="img/hero/hero-mobile.jpg" alt="">
+                <source media="(min-width:1125px)" srcset="img/hero/hero-banner-1.jpg">
+                <source media="(min-width:750px)" srcset="img/hero/hero-tablet-1.jpg">
+                <img src="img/hero/hero-mobile-1.jpg" alt="">
             </picture>
-            <div class="hero-offer">
-                <div class="hero-offer-date">/ 11.11 - 30.11 /</div>
-                <div class="hero-offer-black-friday">BLACK<br>
-                    FRIDAY</div>
-                <div class="hero-offer-text">СКИДКИ <span class="hero-offer-amount">60%</span></div>
-                
-                <a href="#" class="hero-offer-link">Смотреть со скидками >></a>
-            </div>
         </section>
         <section class="stories-block">
             <div class="stories-slider swiper">
@@ -419,8 +411,16 @@
                     <a href="#" class="main-cat-slider-text h2">ПАЛЬТО</a>
                 </div>
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev">
+                <svg width="20" height="30" viewBox="0 0 23 32">
+                    <use xlink:href="img/sprite.svg#arrow-slider-left"></use>
+                </svg>
+            </div>
+            <div class="swiper-button-next">
+                <svg width="20" height="30" viewBox="0 0 23 32">
+                <use xlink:href="img/sprite.svg#arrow-slider-right"></use>
+            </svg>
+        </div>
         </section>
         <section class="main-salespoint">
             <div class="main-salespoint-item">
@@ -494,8 +494,7 @@
                                 3 цвета
                             </div>
                             <div class="catalog-item-favorite">
-                                <input type="checkbox" name="catalog-favs-1" id="catalog-favs-1" class="visually-hidden">
-                                <label for="catalog-favs-1" title="Избранное"></label>
+                                <button type="button">В избранное</button>
                             </div>
                         </div>
                     </div>
@@ -539,8 +538,7 @@
                                 3 цвета
                             </div>
                             <div class="catalog-item-favorite">
-                                <input type="checkbox" name="catalog-favs-2" id="catalog-favs-2" class="visually-hidden">
-                                <label for="catalog-favs-2" title="Избранное"></label>
+                                <button type="button">В избранное</button>
                             </div>
                         </div>
                     </div>
@@ -584,8 +582,7 @@
                                 3 цвета
                             </div>
                             <div class="catalog-item-favorite">
-                                <input type="checkbox" name="catalog-favs-3" id="catalog-favs-3" class="visually-hidden">
-                                <label for="catalog-favs-3" title="Избранное"></label>
+                                <button type="button">В избранное</button>
                             </div>
                         </div>
                     </div>
@@ -629,8 +626,7 @@
                                 3 цвета
                             </div>
                             <div class="catalog-item-favorite">
-                                <input type="checkbox" name="catalog-favs-4" id="catalog-favs-4" class="visually-hidden">
-                                <label for="catalog-favs-4" title="Избранное"></label>
+                                <button type="button">В избранное</button>
                             </div>
                         </div>
                     </div>
@@ -674,8 +670,7 @@
                                 3 цвета
                             </div>
                             <div class="catalog-item-favorite">
-                                <input type="checkbox" name="catalog-favs-5" id="catalog-favs-5" class="visually-hidden">
-                                <label for="catalog-favs-5" title="Избранное"></label>
+                                <button type="button">В избранное</button>
                             </div>
                         </div>
                     </div>
@@ -719,14 +714,17 @@
                                 3 цвета
                             </div>
                             <div class="catalog-item-favorite">
-                                <input type="checkbox" name="catalog-favs-11" id="catalog-favs-11" class="visually-hidden">
-                                <label for="catalog-favs-11" title="Избранное"></label>
+                                <button type="button">В избранное</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <a href="#" class="main-new-link h4">Посмотреть все новинки ></a>
+            <a href="#" class="main-new-link">Посмотреть все новинки
+                <svg width="17" height="12" viewBox="0 0 15.698 8.706">
+                    <use xlink:href="img/sprite.svg#arrow-way"></use>
+                </svg>
+            </a>
         </section>
         <section class="main-hit main-slider-block">
             <h2 class="main-slider-title">Хиты</h2>
@@ -770,8 +768,7 @@
                                 3 цвета
                             </div>
                             <div class="catalog-item-favorite">
-                                <input type="checkbox" name="catalog-favs-6" id="catalog-favs-6" class="visually-hidden">
-                                <label for="catalog-favs-6" title="Избранное"></label>
+                                <button type="button">В избранное</button>
                             </div>
                         </div>
                     </div>
@@ -813,8 +810,7 @@
                                 3 цвета
                             </div>
                             <div class="catalog-item-favorite">
-                                <input type="checkbox" name="catalog-favs-7" id="catalog-favs-7" class="visually-hidden">
-                                <label for="catalog-favs-7" title="Избранное"></label>
+                                <button type="button">В избранное</button>
                             </div>
                         </div>
                     </div>
@@ -856,8 +852,7 @@
                                 3 цвета
                             </div>
                             <div class="catalog-item-favorite">
-                                <input type="checkbox" name="catalog-favs-8" id="catalog-favs-8" class="visually-hidden">
-                                <label for="catalog-favs-8" title="Избранное"></label>
+                                <button type="button">В избранное</button>
                             </div>
                         </div>
                     </div>
@@ -899,8 +894,7 @@
                                 3 цвета
                             </div>
                             <div class="catalog-item-favorite">
-                                <input type="checkbox" name="catalog-favs-9" id="catalog-favs-9" class="visually-hidden">
-                                <label for="catalog-favs-9" title="Избранное"></label>
+                                <button type="button">В избранное</button>
                             </div>
                         </div>
                     </div>
@@ -942,8 +936,7 @@
                                 3 цвета
                             </div>
                             <div class="catalog-item-favorite">
-                                <input type="checkbox" name="catalog-favs-10" id="catalog-favs-10" class="visually-hidden">
-                                <label for="catalog-favs-10" title="Избранное"></label>
+                                <button type="button">В избранное</button>
                             </div>
                         </div>
                     </div>
@@ -985,18 +978,17 @@
                                 3 цвета
                             </div>
                             <div class="catalog-item-favorite">
-                                <input type="checkbox" name="catalog-favs-12" id="catalog-favs-12" class="visually-hidden">
-                                <label for="catalog-favs-12" title="Избранное"></label>
+                                <button type="button">В избранное</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="main-hit-link-block">
-                <a href="#" class="main-hit-link main-hit-link-selected h4">Шубы из экомеха</a>
-                <a href="#" class="main-hit-link h4">Шубы из мутона</a>
-                <a href="#" class="main-hit-link h4">Пальто</a>
-                <a href="#" class="main-hit-link h4">Куртки</a>
+                <a href="#" class="main-hit-link main-hit-link-selected">Шубы из экомеха</a>
+                <a href="#" class="main-hit-link">Шубы из мутона</a>
+                <a href="#" class="main-hit-link">Пальто</a>
+                <a href="#" class="main-hit-link">Куртки</a>
             </div>
             <select name="hit-dropdown" class="main-hit-dropdown h4">
                 <option value="ecofur" selected>Шубы из экомеха</option>
@@ -1052,22 +1044,28 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="main-new-link h4">Cмотреть все ></a>
+            <a href="#" class="main-new-link">Cмотреть все
+                <svg width="17" height="12" viewBox="0 0 15.698 8.706">
+                    <use xlink:href="img/sprite.svg#arrow-way"></use>
+                </svg>
+            </a>
         </section>
         <section class="h1-seo-block">
-            <h1>Стильная женская одежда Алеф</h1>
-            <p>Фабрика «ALEF» начала свою деятельность в 1978 году с небольшого производства по выделке и крашению меха и в настоящее время является одним из крупнейших отечественных брендов в сфере производства верхней одежды.</p>
-            <p>Сегодня фабрика «ALEF» - предприятие полного технологического цикла. <br>
-            Каждый этап производства, начиная с закупки сырья и до реализации изделий, ведётся под строгим контролем высококлассных специалистов и полностью осуществляется сотрудниками компании. <br>
-            Продукция «ALEF» представлена в нескольких направлениях: изделия из натурального меха и пушнины (овчина, норка, лиса, песец, енот, нутрия и т. д.), изделия из многих видов натуральной кожи, велюра, текстиля, разнообразных синтетических материалов, искусственной кожи и искусственного меха (эко-мех). <br>
-            В 2020 году запущена новая долгожданная линия детской одежды.<br>
-            ALEF - это сочетание классической школы пошива с современными технологиями, что позволяет нам производить современную качественную верхнюю одежду более 40 лет. </p>
-            <p>Авангардный подход к дизайну, уникальные авторские разработки, качественные материалы premium класса отечественных и зарубежных производителей, идеальная посадка, контроль на каждом этапе, собственный экспериментальный цех и творческая лаборатория при фабрике - это то, что позволяет нам завоевать любовь наших покупателей и вселяет в нас надежду и уверенность в будущее. </p>
+            <div class="container">
+                <h1>Стильная женская одежда Алеф</h1>
+                <p>Фабрика «ALEF» начала свою деятельность в 1978 году с небольшого производства по выделке и крашению меха и в настоящее время является одним из крупнейших отечественных брендов в сфере производства верхней одежды.</p>
+                <p>Сегодня фабрика «ALEF» - предприятие полного технологического цикла. <br>
+                Каждый этап производства, начиная с закупки сырья и до реализации изделий, ведётся под строгим контролем высококлассных специалистов и полностью осуществляется сотрудниками компании. <br>
+                Продукция «ALEF» представлена в нескольких направлениях: изделия из натурального меха и пушнины (овчина, норка, лиса, песец, енот, нутрия и т. д.), изделия из многих видов натуральной кожи, велюра, текстиля, разнообразных синтетических материалов, искусственной кожи и искусственного меха (эко-мех). <br>
+                В 2020 году запущена новая долгожданная линия детской одежды.<br>
+                ALEF - это сочетание классической школы пошива с современными технологиями, что позволяет нам производить современную качественную верхнюю одежду более 40 лет. </p>
+                <p>Авангардный подход к дизайну, уникальные авторские разработки, качественные материалы premium класса отечественных и зарубежных производителей, идеальная посадка, контроль на каждом этапе, собственный экспериментальный цех и творческая лаборатория при фабрике - это то, что позволяет нам завоевать любовь наших покупателей и вселяет в нас надежду и уверенность в будущее. </p>
+            </div>
         </section>
     </main>
     <footer class="footer">
         <div class="footer-mainline">
-            <div class="container footer-block">
+            <div class="footer-block">
                 <div class="footer-column footer-info-block">
                     <div class="footer-column-title">ИНТЕРНЕТ-МАГАЗИН</div>
                     <ul class="footer-links">
@@ -1138,11 +1136,9 @@
             </div>
         </div>
         <div class="footer-bottomline">
-            <div class="container">
-                <div class="footer-company-information">
-                    ООО ПМФ “АЛЕФ”, Черкесское шоссе, 28, 357502 Москва, Россия, ИНН 2632080117<br>
-                    fabrikaalef.ru © 2022 ВСЕ ПРАВА ЗАЩИЩЕНЫ
-                </div>
+            <div class="footer-company-information">
+                ООО ПМФ “АЛЕФ”, Черкесское шоссе, 28, 357502 Москва, Россия, ИНН 2632080117<br>
+                fabrikaalef.ru © 2022 ВСЕ ПРАВА ЗАЩИЩЕНЫ
             </div>
         </div>
     </footer>
