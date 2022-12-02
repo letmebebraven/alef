@@ -101,7 +101,8 @@ $(function () {
     if ($(".header-topline").is(":visible")) {
       y = $(".header-topline").outerHeight();
     }
-    let headerOffset = x + y;
+    // let headerOffset = x + y;
+    let headerOffset = 31;
     // console.log(headerOffset);
     if (window.pageYOffset > headerOffset) {
       $(".header").addClass("header-fixed");
