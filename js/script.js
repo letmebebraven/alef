@@ -95,19 +95,23 @@ $(function () {
   $(window).on("scroll", function () {
     let x = 0;
     let y = 0;
+    let z = $(".header-mainline").outerHeight()
     if ($(".header-notification").is(":visible")) {
       x = $(".header-notification").outerHeight();
     }
     if ($(".header-topline").is(":visible")) {
       y = $(".header-topline").outerHeight();
     }
-    // let headerOffset = x + y;
-    let headerOffset = 31;
+    let headerOffset = x + y;
+    let mainPadding =  z;
+    // let headerOffset = 31;
     // console.log(headerOffset);
     if (window.pageYOffset > headerOffset) {
       $(".header").addClass("header-fixed");
+      $("main").css('padding-top', mainPadding);
     } else {
       $(".header").removeClass("header-fixed");
+      $("main").css('padding-top', 0);
     }
   });
   //promo line
