@@ -481,6 +481,13 @@ img {
   font-weight: 500;
   color: var(--grey-60);
 }
+.footer-links li {
+  position: relative;
+  margin: 0;
+}
+.footer-links li::before {
+  content: none!important;
+}
 .footer-links li:not(:last-child) {
   margin-bottom: 10px;
 }
