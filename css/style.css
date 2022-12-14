@@ -65,12 +65,11 @@
 
 /* base */
 * {
-  position: relative;
+  /* position: relative; */
   box-sizing: border-box;
 }
 body {
   font-family: "Circe", sans-serif;
-  /* font-family: "Montserrat", sans-serif; */
   font-size: 13px;
   line-height: 16px;
   font-weight: 400;
@@ -118,6 +117,7 @@ h5,
 a {
   text-decoration: none;
   color: inherit;
+  position: relative;
 }
 p {
   margin: 0 0 1em;
@@ -247,6 +247,7 @@ img {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
 }
 .header-burger-menu {
   display: none;
@@ -313,6 +314,7 @@ img {
   color: inherit;
   display: flex;
   transition: color var(--time);
+  position: relative;
 }
 .header-categories a:hover {
   color: var(--red);
@@ -382,6 +384,7 @@ img {
 .header-icons li {
   margin: 0 20px;
   display: flex;
+  position: relative;
 }
 .header-icons li > a {
   display: flex;
@@ -646,6 +649,7 @@ img {
 .main-slider-block {
   padding: 90px 20px 0;
   overflow: hidden;
+  position: relative;
 }
 .main-slider {
   overflow: visible;
@@ -677,6 +681,7 @@ img {
 }
 .main-hit-link {
   transition: var(--time);
+  position: relative;
 }
 .main-hit-link::before {
   content: "";
@@ -732,6 +737,7 @@ img {
   display: flex;
   flex-direction: column;
   padding: 8px 53px 10px 8px;
+  position: relative;
 }
 .catalog-item-sizes {
   padding: 16px 16px 24px;
@@ -752,20 +758,22 @@ img {
 }
 .catalog-item:hover .catalog-item-sizes {
   transform: translateY(0);
+  pointer-events: all;
 }
 .catalog-item-sizes-block {
   margin: 16px 0 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  pointer-events: all;
 }
 .catalog-item-sizes-block button {
   padding: 0;
   background: transparent;
   border: none;
   cursor: pointer;
-}
-.catalog-item-sizes-block button:not(:last-child) {
-  margin-right: 22px;
+  margin: 0 11px 5px;
 }
 .catalog-item-label {
   margin-bottom: 2px;
@@ -806,6 +814,7 @@ img {
   padding: 4px 0 0;
   display: flex;
   font-size: 0;
+  position: relative;
 }
 .catalog-item-colors button {
   width: 14px;
@@ -813,6 +822,7 @@ img {
   cursor: pointer;
   background: transparent;
   border: none;
+  position: relative;
 }
 .catalog-item-colors button::before {
   content: "";
@@ -867,11 +877,20 @@ img {
 .catalog-item .swiper-button-next,
 .catalog-item .swiper-button-prev {
   background-image: url("../img/catalog-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   width: 45px;
   height: 50px;
   margin-top: -25px;
   opacity: 0;
   transition: var(--time);
+}
+.catalog-item .swiper-button-next {
+  right: 0;
+  transform: scaleX(-1);
+}
+.catalog-item .swiper-button-prev {
+  left: 0;
 }
 .catalog-item:hover .swiper-button-next:not(.swiper-button-disabled),
 .catalog-item:hover .swiper-button-prev:not(.swiper-button-disabled) {
@@ -921,8 +940,12 @@ img {
   display: none;
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15));
 }
+.header-search-form {
+  position: relative;
+}
 .header-search-open {
   display: block;
+  overflow-y: visible;
 }
 .header-container {
   width: 768px;
@@ -957,9 +980,13 @@ img {
 }
 .header-search-reset {
   top: 15px;
+  display: none;
 }
 .header-search-reset svg {
   fill: var(--grey-25);
+}
+.header-search-reset-active {
+  display: block;
 }
 .header-search-prev-reset {
   top: 14px;
@@ -987,6 +1014,7 @@ img {
   padding: 10px 26px 10px 30px;
   display: block;
   margin-top: 10px;
+  position: relative;
 }
 .header-search-prev-item::before {
   content: "";
@@ -1231,6 +1259,16 @@ img {
   }
   .main-actions-slider {
     margin: 0;
+  }
+  .main-actions-slider .main-slider-item {
+    height: 555px;
+    display: flex;
+  }
+  .main-actions-slider .main-slider-item a {
+    display: flex;
+  }
+  .main-actions-slider .main-slider-item picture {
+    display: flex;
   }
   .main-actions-slider img {
     width: 400px;
@@ -1568,6 +1606,9 @@ img {
   .footer-social-links li {
     margin-bottom: 20px;
   }
+  .header-search-open {
+    overflow-y: auto;
+  }
   .header-search {
     padding: 0;
     height: 100vh;
@@ -1584,13 +1625,9 @@ img {
     font-weight: 400;
   }
   .header-search-reset {
-    display: none;
     width: 48px;
     height: 60px;
     top: 0;
-  }
-  .header-search-reset-mobile {
-    display: block;
   }
   .header-search-reset svg {
     fill: black;
@@ -1614,6 +1651,7 @@ img {
   .header-search-prev-item {
     margin-top: 0;
     padding: 10px 46px 10px 70px;
+    position: relative;
   }
   .header-search-prev-item::before {
     left: 40px;
@@ -1826,6 +1864,7 @@ img {
   }
   .main-actions-slider .main-slider-item {
     width: 280px;
+    height: 484px;
   }
   .catalog-item-info {
     margin: 5px 0;

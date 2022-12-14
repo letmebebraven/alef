@@ -153,7 +153,7 @@ $(function () {
     $(".header-search-prev").hide();
     $(".header-search-result").removeClass("header-search-result-open");
     $(".header-search-input").val("");
-    $(".header-search-reset").removeClass("header-search-reset-mobile");
+    $(".header-search-reset").removeClass("header-search-reset-active");
     return false;
   });
 
@@ -168,21 +168,12 @@ $(function () {
   });
 
   $(".header-search-reset").on("click", function () {
-    if (!$(".header-search-input").val()) {
-      $(".header-search-open").removeClass("header-search-open");
-      $(".page").toggleClass("no-scroll");
-      $(".header-search-prev").hide();
-      $(".header-search-result").removeClass("header-search-result-open");
-    } else {
-      $(".header-search-input").val("");
-      if ($(".header-search-prev-item").length) {
-        $(".header-search-prev").show();
-      }
-      $(".header-search-result").removeClass("header-search-result-open");
-      if ($(window).width() <= 1024) {
-        $(".header-search-reset").removeClass("header-search-reset-mobile");
-      }
+    $(".header-search-input").val("");
+    if ($(".header-search-prev-item").length) {
+      $(".header-search-prev").show();
     }
+    $(".header-search-result").removeClass("header-search-result-open");
+    $(".header-search-reset").removeClass("header-search-reset-active");
     return false;
   });
 
@@ -198,17 +189,13 @@ $(function () {
     if ($(this).val()) {
       $(".header-search-result").addClass("header-search-result-open");
       $(".header-search-prev").hide();
-      if ($(window).width() <= 1024) {
-        $(".header-search-reset").addClass("header-search-reset-mobile");
-      }
+      $(".header-search-reset").addClass("header-search-reset-active");
     } else {
       if ($(".header-search-prev-item").length) {
         $(".header-search-result").removeClass("header-search-result-open");
         $(".header-search-prev").show();
       }
-      if ($(window).width() <= 1024) {
-        $(".header-search-reset").removeClass("header-search-reset-mobile");
-      }
+      $(".header-search-reset").removeClass("header-search-reset-active");
     }
   });
   // header cart popup
@@ -250,9 +237,7 @@ $(function () {
       $(".header-search-prev").hide();
       $(".header-search-result").removeClass("header-search-result-open");
       $(".header-search-input").val("");
-      if ($(window).width() <= 1024) {
-        $(".header-search-reset").removeClass("header-search-reset-mobile");
-      }
+      $(".header-search-reset").removeClass("header-search-reset-active");
     }
     if (
       $(".header-cart-popup-active").length &&
