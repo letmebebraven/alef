@@ -208,6 +208,14 @@ $(function () {
     return false;
   });
 
+  $(".header-cart-popup-link").on("click", function () {
+    window.location.href = $(".header-cart-popup-link").attr("href");
+  });
+
+  $(".header-cart-popup-item .catalog-item-photo").on("click", function () {
+    window.location.href = $(this).attr("href");
+  });
+
   $(window).on("resize", function () {
     if ($(window).width() <= 1024) {
       $(".header-cart-popup-active").removeClass("header-cart-popup-active");
@@ -245,5 +253,6 @@ $(function () {
     ) {
       $(".header-cart-popup-active").removeClass("header-cart-popup-active");
     }
+    return false;
   });
 });
