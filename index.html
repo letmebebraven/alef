@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page">
-    <header class="header" id="header">
+    <header class="header header-notification-hidden" id="header">
         <div class="header-notification">
             <div class="header-notification-text">Бесплатная доставка при заказе от 10000₽</div>
             <button type="button" class="header-notification-close">
@@ -47,14 +47,14 @@
             </button>
             <nav class="header-navigation">
                 <div class="header-categories js-menu-wrapper">
-                    <div class="menu-mobile-hidden header-categories-item"><a href="#">Шубы и меха</a></div>
+                    <div class="menu-mobile-hidden header-categories-item"><a href="#123">Шубы и меха</a></div>
                     <div class="header-categories-item header-categories-item"><a href="#">Новинки</a></div>
                     <div class="header-categories-toggle header-category-main header-categories-item">
                         <a href="#" class="js-submenu-trigger">Женщинам</a>
                         <div class="header-categories-dropdown dropdown-1 js-submenu">
-                            <div class="js-back-trigger menu-hidden"><a href="#">Женщинам</a></div>
+                            <div class="js-back-trigger menu-hidden"><a href="#345">Женщинам</a></div>
                             <div>
-                                <a href="#" class="js-submenu-trigger">Шубы</a>
+                                <a href="#45678" class="js-submenu-trigger">Шубы</a>
                                 <div class="dropdown-2 js-submenu">
                                     <div class="js-back-trigger menu-hidden"><a href="#">Шубы</a></div>
                                     <div>
@@ -165,50 +165,42 @@
                     <span class="header-items-in-cart">2</span>
                     <div class="header-cart-popup">
                         <div class="header-cart-popup-list">
-                            <div class="header-cart-popup-item catalog-item">
-                                <a href="#" class="catalog-item-photo">
-                                    <picture>
-                                        <img src="img/cart/item-1.jpg" alt="" width="90" height="120">
-                                    </picture>
-                                </a>
-                                <div class="catalog-item-info">
-                                    <div class="catalog-item-name-block">
-                                        <div class="catalog-item-name">Стёганый анорак с пуговицами</div>
-                                        <div class="catalog-item-label"><span class="catalog-item-label-sale">-41%</span></div>
-                                    </div>
-                                    <div class="catalog-item-params">
-                                        <div class="catalog-item-size">42</div>
-                                        <div class="catalog-item-color">Бежевый</div>
-                                        <div class="catalog-item-amount">1 шт.</div>
-                                    </div>
-                                    <div class="catalog-item-price">
+                            <a href="#" class="header-cart-popup-item catalog-item">
+                                        <img src="img/cart/item-1.jpg" class="catalog-item-photo" alt="" width="90" height="120">
+                                <span class="catalog-item-info">
+                                    <span class="catalog-item-name-block">
+                                        <span class="catalog-item-name">Стёганый анорак с пуговицами</span>
+                                        <span class="catalog-item-label"><span class="catalog-item-label-sale">-41%</span></span>
+                                    </span>
+                                    <span class="catalog-item-params">
+                                        <span class="catalog-item-size">42</span>
+                                        <span class="catalog-item-color">Бежевый</span>
+                                        <span class="catalog-item-amount">1 шт.</span>
+                                    </span>
+                                    <span class="catalog-item-price">
                                         <span class="catalog-item-price-sale">7 600 руб.</span>
                                         <span class="catalog-item-price-old">13 400 руб.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="header-cart-popup-item catalog-item">
-                                <a href="#" class="catalog-item-photo">
-                                    <picture>
-                                        <img src="img/cart/item-1.jpg" alt="" width="90" height="120">
-                                    </picture>
-                                </a>
-                                <div class="catalog-item-info">
-                                    <div class="catalog-item-name-block">
-                                        <div class="catalog-item-name">Стёганый анорак с пуговицами</div>
-                                        <div class="catalog-item-label"><span class="catalog-item-label-sale">-41%</span></div>
-                                    </div>
-                                    <div class="catalog-item-params">
-                                        <div class="catalog-item-size">42</div>
-                                        <div class="catalog-item-color">Бежевый</div>
-                                        <div class="catalog-item-amount">1 шт.</div>
-                                    </div>
-                                    <div class="catalog-item-price">
+                                    </span>
+                                </span>
+                            </a>
+                            <a href="#" class="header-cart-popup-item catalog-item">
+                                <img src="img/cart/item-1.jpg" class="catalog-item-photo" alt="" width="90" height="120">
+                                <span class="catalog-item-info">
+                                    <span class="catalog-item-name-block">
+                                        <span class="catalog-item-name">Стёганый анорак с пуговицами</span>
+                                        <span class="catalog-item-label"><span class="catalog-item-label-sale">-41%</span></span>
+                                    </span>
+                                    <span class="catalog-item-params">
+                                        <span class="catalog-item-size">42</span>
+                                        <span class="catalog-item-color">Бежевый</span>
+                                        <span class="catalog-item-amount">1 шт.</span>
+                                    </span>
+                                    <span class="catalog-item-price">
                                         <span class="catalog-item-price-sale">7 600 руб.</span>
                                         <span class="catalog-item-price-old">13 400 руб.</span>
-                                    </div>
-                                </div>
-                            </div>
+                                    </span>
+                                </span>
+                            </a>
                         </div>
                         <a href="#" class="header-cart-popup-link">Перейти в корзину</a>
                     </div>
@@ -348,12 +340,19 @@
         </div>
     </header>
     <main>
-        <section class="hero-banner">
-            <picture class="hero-banner-img">
-                <source media="(min-width:1025px)" srcset="img/hero/hero-banner-1.jpg">
-                <source media="(min-width:750px)" srcset="img/hero/hero-tablet-1.jpg">
-                <img src="img/hero/hero-mobile-1.jpg" alt="">
-            </picture>
+        <section class="hero-banner swiper">
+            <div class="swiper-wrapper">
+                <picture class="hero-banner-img swiper-slide">
+                    <source media="(min-width:1025px)" srcset="img/hero/hero-banner-2.jpg">
+                    <source media="(min-width:750px)" srcset="img/hero/hero-tablet-2.jpg">
+                    <img src="img/hero/hero-tablet-2.jpg" alt="">
+                </picture>
+                <picture class="hero-banner-img swiper-slide">
+                    <source media="(min-width:1025px)" srcset="img/hero/hero-banner-1.jpg">
+                    <source media="(min-width:750px)" srcset="img/hero/hero-tablet-1.jpg">
+                    <img src="img/hero/hero-tablet-1.jpg" alt="">
+                </picture>
+            </div>
         </section>
         <section class="stories-block">
             <div class="stories-slider swiper">
