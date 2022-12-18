@@ -373,6 +373,9 @@ img {
   display: flex;
   position: relative;
 }
+.header-icons li::before {
+  content: none;
+}
 .header-icons li > a {
   display: flex;
 }
@@ -1266,8 +1269,10 @@ img {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    padding-right: 26px;
+    padding: 0 26px 0 0;
     color: var(--grey-70);
+    width: auto;
+    height: auto;
   }
   .main-actions-slider {
     margin: 0;
