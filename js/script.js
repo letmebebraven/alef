@@ -24,7 +24,7 @@ function allSwipers() {
       prevEl: ".main-cat-slider .swiper-button-prev",
     },
     breakpoints: {
-      1024: {
+      1025: {
         slidesPerView: 2,
       },
     },
