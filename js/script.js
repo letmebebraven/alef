@@ -141,8 +141,9 @@ $(function () {
 
     return false;
   });
-  $(".menu-active .js-submenu-trigger").on("click", function () {
+  $(".js-submenu-trigger").on("click", function (e) {
     if ($(".js-menu").is(".menu-active")) {
+      e.preventDefault();
       $(this).siblings(".js-submenu").addClass("js-submenu-active");
       $(".header-navigation").addClass("on-top");
       $(".js-menu").addClass("submenu-active");
@@ -150,8 +151,9 @@ $(function () {
       $(this).closest(".header-categories-item").addClass("hide-siblings");
       $(this).closest(".js-submenu-active").addClass("submenu-parent");
       $(this).closest(".js-submenu-active div").addClass("hide-siblings");
+    } else {
+      window.location.href = $(this).attr("href");
     }
-
     return false;
   });
   $(".js-back-trigger").on("click", function () {
