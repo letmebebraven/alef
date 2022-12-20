@@ -692,6 +692,7 @@ ul.header-icons li::before {
 .main-hit-link {
   transition: var(--time);
   position: relative;
+  cursor: pointer;
 }
 .main-hit-link::before {
   content: "";
