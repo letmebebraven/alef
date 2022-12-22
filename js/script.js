@@ -1,113 +1,111 @@
 //variables
 const header = document.querySelector(".header");
 
-//all swiper inits
-function allSwipers() {
-  //hero-mainpage
-  const swiperHero = new Swiper(".hero-banner.swiper", {
-    loop: true,
-    autoplay: {
-      delay: 5000,
+//hero-mainpage
+const swiperHero = new Swiper(".hero-banner.swiper", {
+  loop: true,
+  autoplay: {
+    delay: 5000,
+  },
+});
+
+//stories mainpage
+const swiperStories = new Swiper(".stories-slider", {
+  slidesPerView: "auto",
+});
+
+//categories mainpage
+const swiperMainCategories = new Swiper(".main-cat-slider", {
+  slidesPerView: 1,
+  navigation: {
+    nextEl: ".main-cat-slider .swiper-button-next",
+    prevEl: ".main-cat-slider .swiper-button-prev",
+  },
+  breakpoints: {
+    1025: {
+      slidesPerView: 2,
     },
-  });
+  },
+});
 
-  //stories mainpage
-  const swiperStories = new Swiper(".stories-slider", {
-    slidesPerView: "auto",
-  });
+//slider new goods mainpage
+const swiperMainNew = new Swiper(".main-new-slider", {
+  slidesPerView: 2,
+  spaceBetween: 10,
+  breakpoints: {
+    750: {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1160: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    1540: {
+      slidesPerView: 5,
+      spaceBetween: 20,
+    },
+  },
+});
 
-  //categories mainpage
-  const swiperMainCategories = new Swiper(".main-cat-slider", {
+//slider hits mainpage
+const swiperMainHit = new Swiper(".main-hit-slider", {
+  slidesPerView: 2,
+  spaceBetween: 10,
+  breakpoints: {
+    750: {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1160: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    1540: {
+      slidesPerView: 5,
+      spaceBetween: 20,
+    },
+  },
+});
+
+//slider actions mainpage
+const swiperMainActions = new Swiper(".main-actions-slider", {
+  slidesPerView: "auto",
+  spaceBetween: 20,
+  breakpoints: {
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+//photo slider catalog item
+const catalogItemSlider = document.querySelectorAll(".catalog-item-photo");
+for (i = 0; i < catalogItemSlider.length; i++) {
+  catalogItemSlider[i].classList.add("catalog-item-photo-" + i);
+
+  var slider = new Swiper(".catalog-item-photo-" + i, {
     slidesPerView: 1,
+    spaceBetween: 10,
     navigation: {
-      nextEl: ".main-cat-slider .swiper-button-next",
-      prevEl: ".main-cat-slider .swiper-button-prev",
+      nextEl: ".catalog-item-photo-" + i + " .swiper-button-next",
+      prevEl: ".catalog-item-photo-" + i + " .swiper-button-prev",
     },
-    breakpoints: {
-      1025: {
-        slidesPerView: 2,
-      },
-    },
-  });
-
-  //slider new goods mainpage
-  const swiperMainNew = new Swiper(".main-new-slider", {
-    slidesPerView: 2,
-    spaceBetween: 10,
-    breakpoints: {
-      750: {
-        slidesPerView: "auto",
-        spaceBetween: 20,
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      1160: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-      1540: {
-        slidesPerView: 5,
-        spaceBetween: 20,
-      },
+    pagination: {
+      el: ".catalog-item-photo-" + i + " .swiper-pagination",
+      type: "bullets",
     },
   });
-
-  //slider hits mainpage
-  const swiperMainHit = new Swiper(".main-hit-slider", {
-    slidesPerView: 2,
-    spaceBetween: 10,
-    breakpoints: {
-      750: {
-        slidesPerView: "auto",
-        spaceBetween: 20,
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      1160: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-      1540: {
-        slidesPerView: 5,
-        spaceBetween: 20,
-      },
-    },
-  });
-
-  //slider actions mainpage
-  const swiperMainActions = new Swiper(".main-actions-slider", {
-    slidesPerView: "auto",
-    spaceBetween: 20,
-    breakpoints: {
-      1024: {
-        slidesPerView: 4,
-      },
-    },
-  });
-
-  //photo slider catalog item
-  const catalogItemSlider = document.querySelectorAll(".catalog-item-photo");
-  for (i = 0; i < catalogItemSlider.length; i++) {
-    catalogItemSlider[i].classList.add("catalog-item-photo-" + i);
-
-    var slider = new Swiper(".catalog-item-photo-" + i, {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: ".catalog-item-photo-" + i + " .swiper-button-next",
-        prevEl: ".catalog-item-photo-" + i + " .swiper-button-prev",
-      },
-      pagination: {
-        el: ".catalog-item-photo-" + i + " .swiper-pagination",
-        type: "bullets",
-      },
-    });
-  }
 }
+
 //cookies [for notification]
 function getCookie(name) {
   let cookie_arr = document.cookie.split("; ");
@@ -272,28 +270,32 @@ document
     header.classList.add("header-notification-hidden");
   });
 
-allSwipers();
-
 document.addEventListener("click", (e) => {
   const cartPopup = document.querySelector(".header-cart-popup");
   const isClosestCart = e.target.closest(".header-cart-popup");
-  if (!isClosestCart && cartPopup.classList.contains("header-cart-popup-active")) {
+  if (
+    !isClosestCart &&
+    cartPopup.classList.contains("header-cart-popup-active")
+  ) {
     cartPopup.classList.remove("header-cart-popup-active");
   }
 
   const searchPopup = document.querySelector(".header-search");
   const isClosestSearch = e.target.closest(".header-search");
   const pageEl = document.querySelector(".page");
-  if (!isClosestSearch && searchPopup.classList.contains("header-search-open")) {
+  if (
+    !isClosestSearch &&
+    searchPopup.classList.contains("header-search-open")
+  ) {
     searchPopup.classList.remove("header-search-open");
     pageEl.classList.remove("no-scroll");
   }
 });
 
 let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+document.documentElement.style.setProperty("--vh", `${vh}px`);
 
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
 });
