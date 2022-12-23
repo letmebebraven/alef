@@ -257,6 +257,9 @@ img {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
+ul.header-links-bar li::before {
+  content: none;
+}
 .header-mainline {
   padding: 0 40px;
   display: -webkit-box;
@@ -769,6 +772,7 @@ ul.header-icons li::before {
   font-size: 20px;
   line-height: 26px;
   color: var(--grey-85);
+  position: relative;
 }
 .main-salespoint-item {
   display: -webkit-box;
@@ -1021,6 +1025,7 @@ ul.header-icons li::before {
   background: transparent;
   border: none;
   position: relative;
+  border-radius: 50%;
 }
 .catalog-item-colors button::before {
   content: "";
