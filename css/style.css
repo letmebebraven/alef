@@ -786,6 +786,7 @@ ul.header-icons li::before {
   -ms-flex-align: center;
   align-items: center;
   text-align: center;
+  position: relative;
 }
 .main-salespoint-item:not(:last-child)::after {
   content: "";
