@@ -170,13 +170,13 @@ $(function () {
   $(".header-search-trigger").on("click", function () {
     $(".header-search").addClass("header-search-open");
     $(".header-cart-popup-active").removeClass("header-cart-popup-active");
-    $(".page").toggleClass("no-scroll");
+    // $(".page").toggleClass("no-scroll");
     return false;
   });
 
   $(".header-search-back").on("click", function () {
     $(".header-search-open").removeClass("header-search-open");
-    $(".page").toggleClass("no-scroll");
+    // $(".page").toggleClass("no-scroll");
     $(".header-search-prev").hide();
     $(".header-search-result").removeClass("header-search-result-open");
     $(".header-search-input").val("");
@@ -288,7 +288,7 @@ document.addEventListener("click", (e) => {
     searchPopup.classList.contains("header-search-open")
   ) {
     searchPopup.classList.remove("header-search-open");
-    pageEl.classList.remove("no-scroll");
+    // pageEl.classList.remove("no-scroll");
   }
 });
 
