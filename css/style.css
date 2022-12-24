@@ -1460,6 +1460,7 @@ ul.menu li, ul.mini-menu li {
   font-size: 16px;
 }
 body .menu_top_block li.full .dropdown>li>a {
+  font-size: 16px;
   line-height: 21px;
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .popup-window {
@@ -1502,6 +1503,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .popup-window {
 }
 .block_side_WIDE.catalog_page .right_block .section-content-wrapper.with-leftblock .inner_wrapper > div:not(.ajax_load), .block_side_WIDE .section-content-wrapper.with-leftblock .group_description_block {
   padding-left: 0;
+}
+
+.counter_wrapp .more_text {
+  font-size: 13px;
+  line-height: 15px;
 }
 
 @media (max-width: 1539px) {
