@@ -633,6 +633,9 @@ ul.header-icons li::before {
   line-height: auto;
   color: var(--grey-60);
 }
+ul.footer-social-links li::before {
+  content: none;
+}
 .footer-social-links a {
   width: 47px;
   height: 100%;
@@ -1411,6 +1414,10 @@ ul.header-icons li::before {
   -ms-flex-direction: column;
   flex-direction: column;
 }
+.header-cart-popup .catalog-item-name {
+  font-size: 16px;
+  line-height: 18px;
+}
 .header-cart-popup .catalog-item-params {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1419,6 +1426,8 @@ ul.header-icons li::before {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  font-size: 14px;
+  line-height: 16px;
 }
 .header-cart-popup .catalog-item-price {
   display: -webkit-box;

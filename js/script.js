@@ -4,13 +4,15 @@ const header = document.querySelector(".header");
 //all swiper inits
 function allSwipers() {
   //hero-mainpage
-  const swiperHero = new Swiper(".hero-banner.swiper", {
-    loop: true,
-    autoplay: {
-      delay: 5000,
-    },
-  });
-
+  if ( $(".hero-banner.swiper .swiper-slide").length > 1 ) {
+    const swiperHero = new Swiper(".hero-banner.swiper", {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+      },
+    });
+  }
+  
   //stories mainpage
   const swiperStories = new Swiper(".stories-slider", {
     slidesPerView: "auto",
