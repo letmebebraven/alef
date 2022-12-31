@@ -1417,6 +1417,7 @@ ul.footer-social-links li::before {
 .header-cart-popup .catalog-item-name {
   font-size: 16px;
   line-height: 18px;
+  padding-right: 5px;
 }
 .header-cart-popup .catalog-item-params {
   display: -webkit-box;
@@ -1460,6 +1461,18 @@ ul.footer-social-links li::before {
 .header-cart-popup-link:hover {
   background-color: var(--grey-70);
   color: var(--white);
+}
+.header-cart-remove {
+  border: none;
+  background: transparent;
+  width: 12px;
+  height: 18px;
+  position: absolute;
+  top: 5px;
+  right: 0;
+  font-size: 0;
+  padding: 0;
+  cursor: pointer;
 }
 
 /* fonts fix */

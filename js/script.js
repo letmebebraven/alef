@@ -246,6 +246,14 @@ $(function () {
     window.location.href = $(this).attr("href");
   });
 
+  $(".header-cart-remove").on("click", function () {
+    $(this).closest(".header-cart-popup-item").remove();
+    if (!$(".header-cart-popup-item").length) {
+      $(".header-cart-popup").removeClass("header-cart-popup-active");
+    }
+    return false;
+  });
+
   $(window).on("resize", function () {
     if ($(window).width() <= 1024) {
       $(".header-cart-popup-active").removeClass("header-cart-popup-active");
