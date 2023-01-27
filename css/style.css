@@ -1296,11 +1296,13 @@ ul.footer-social-links li::before {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  height: 90px;
 }
 .header-search-products .catalog-item-photo {
   display: block;
   margin-right: 5px;
   width: auto;
+  height: auto;
 }
 .header-search-products .catalog-item-info {
   font-size: 12px;
@@ -2208,6 +2210,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .popup-window {
     -ms-flex-direction: column;
     flex-direction: column;
     margin-bottom: 0;
+    height: auto;
+  }
+  .header-search-products .catalog-item-photo {
+    height: auto;
   }
   .header-search-products .catalog-item-photo img {
     width: 100%;
